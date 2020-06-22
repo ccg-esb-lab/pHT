@@ -1,0 +1,82 @@
+\documentclass[fleqn,12pt]{wlscirep}
+
+%\newcommand{\charly}[1]{\textcolor{?}{#1}}
+\definecolor{gainsboro}{rgb}{0.86, 0.86, 0.86}
+\newcommand{\doing}[1]{\textcolor{gray}{#1}}
+\newcommand{\todo}[1]{\textcolor{gainsboro}{#1}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\fig}[1]{\textcolor{black}{#1}}
+\newcommand\note[1]{\mbox{}\marginpar{\footnotesize\raggedright\hspace{0pt}\color{orange}\emph{#1}}}
+
+\usepackage{lineno}
+\usepackage{graphicx}
+
+\let\oldthebibliography\thebibliography
+\let\endoldthebibliography\endthebibliography
+\renewenvironment{thebibliography}[1]{
+  \begin{oldthebibliography}{#1}
+    \setlength{\itemsep}{0em}
+    \setlength{\parskip}{0em}
+}
+{
+  \end{oldthebibliography}
+}
+
+
+\usepackage{hyperref}
+\hypersetup{
+     colorlinks   = true,
+     citecolor    = black
+}
+
+\usepackage{parskip}
+\setlength{\parskip}{6pt}
+\setlength{\parindent}{0pt}
+\renewcommand{\baselinestretch}{1.1} 
+
+\usepackage{wrapfig}
+
+\title{Quantifying plasmid dynamics using single-cell microfluidics and image bioinformatics}
+
+
+
+\author[1]{JCR Hern\'andez}
+\author[2]{J Rodr\'iguez-Beltr\'an}
+\author[2]{A San Mill\'an}
+\author[1,*]{R Pe\~na-Miller}
+\author[1,*]{A Fuentes-Hern\'andez}
+\affil[1]{  \, Laboratorio de Biolog\'ia Sint\'etica y de Sistemas, Centro de Ciencias Gen\'omicas, Universidad Nacional Aut\'onoma de M\'exico, 62210, Cuernavaca, M\'exico}
+\affil[2]{ \, Department of Microbiology, Hospital Universitario Ramon y Cajal (IRYCIS), Madrid, Spain}
+\affil[*]{Corresponding authors: ayarifh@ccg.unam.mx, rpm@ccg.unam.mx}
+
+
+\keywords{plasmid dynamics, fluorescence microscopy, image processing, microfluidics}
+
+\begin{abstract}
+\footnotesize{
+Multicopy plasmids play an important role in bacterial ecology and evolution by accelerating the rate of adaptation and providing a platform for rapid gene amplification and evolutionary rescue. 
+Despite the relevance of plasmids in bacterial evolutionary dynamics, evaluating the population-level consequences of randomly segregating and replicating plasmids in individual cells remains a challenging problem, both in theory and experimentally.
+In recent years, technological advances in fluorescence microscopy and microfluidics have allowed studying temporal changes in gene expression by quantifying the fluorescent intensity of individual cells under controlled environmental conditions.
+In this paper, we will describe the manufacture, experimental setup, and data analysis pipeline of different microfluidic systems that can be used to study plasmid dynamics, both in single-cells and in populations.
+To illustrate the benefits and limitations of microfluidics to study multicopy plasmid dynamics, we will use an experimental model system consisting on {\em Escherichia coli} K12 carrying non-conjugative, multicopy plasmids ($19$ copies per cell, in average) encoding different fluorescent markers and $\beta$-lactam resistance genes. 
+First, we will use an image-based flow cytometer to estimate changes in the allele distribution of a heterogeneous population under different selection regimes.  Then we will use a mother-machine microfluidic device to obtain time-series of fluorescent intensity of individual cells to argue that plasmid segregation and replication dynamics are inherently stochastic processes.  Finally, using a microchemostat, we track thousands of cells in time to reconstruct bacterial lineages and evaluate the plasmid frequency distributions that emerge in response to a range of selective pressures.
+}
+\end{abstract}
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Research highlights}
+
+\begin{itemize}
+    \item  Imaging can be used to study plasmid dynamics at multiple scales: from single-cells to bacterial populations 
+    
+    \item Intracellular plasmid dynamics is a noise-driven process resulting from randomly segregating and replicating plasmids.
+    
+    \item Selection modulates allele distributions by modifying the fraction of cells with different plasmid configurations.
+    
+    \item  Heteroplasmy is unstable in constant environments and stabilized in fluctuating environments.
+    
+\end{itemize}
+
+\end{document}
